@@ -1,11 +1,18 @@
 USAGE: Name the launcher the same name as the .PS1 file
 EXAMPLE: To run MyFile.ps1 copy UniversalPS1Launcher.cmd to MyFile.cmd
 
-To run your script, simply double click the .cmd file or run
-from a command line, powershell window, or terminal window.
+To run your script, simply double click the .cmd file from File Explorer,
+or run from a command line, powershell window, or terminal window.
+EXAMPLE: C:\users\public> MyFile.cmd
+NOTE: Any command line variables will be passed to the script.
+
+To always run a script with Administrative Privileges, copy the contents
+of the sample-run-ad-admin.ps1 to the beginning of your .ps1 file.
+You will be prompted for credentials.
 EXAMPLE: C:\users\public> MyFile.cmd
 
-To run a script with Administrative Privlidges, you must copy the contents
-of the sample-run-as-admin.ps1 to the beginning of your .ps1 file as well.
-Then specify "-RunAs Admin" when running the .cmd file.
+To run a script with User or Administrative Privileges, copy the contents
+of the sample-run-as-user-or-admin.ps1 to the beginning of your .ps1 file.
+Then specify "-RunAs Admin" when running the .cmd file to run with
+Administrative privileges.  You will be prompted for credentials.
 EXAMPLE: C:\users\public> MyFile.cmd -RunAs Admin

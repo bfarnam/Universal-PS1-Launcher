@@ -2,6 +2,10 @@
 setlocal enableDelayedExpansion
 set _version=v2.3 2025 January 5 General Release
 set _copynotice=Copyright (c) 2025 Brett A. Farnam (brett_farnam@yahoo.com)
+
+REM     Copyright (c) 2025 Brett A. Farnam (brett_farnam@yahoo.com)
+REM     Released under the MIT license
+
 ECHO
 ECHO  ____ ____ ____ ____ ____ ____ ____ ____ ____ 
 ECHO ^|^|U ^|^|^|n ^|^|^|i ^|^|^|v ^|^|^|e ^|^|^|r ^|^|^|s ^|^|^|a ^|^|^|l ^|^|
