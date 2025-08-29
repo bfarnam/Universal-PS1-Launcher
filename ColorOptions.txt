@@ -1,0 +1,8 @@
+Personally, I am a fan of the old powershell "blue" color code.  This is
+is not the norm for newer versions.  So I have enabled this in the 
+beginning of the command file.  You can disable this if you wish by 
+commenting the lines out of the command file.
+
+Technically, the older color codes are non standard RGB color codes:
+Background: 1,36,86
+Foreground: 238,237,240

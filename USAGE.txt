@@ -5,14 +5,18 @@ To run your script, simply double click the .cmd file from File Explorer,
 or run from a command line, powershell window, or terminal window.
 EXAMPLE: C:\users\public> MyFile.cmd
 NOTE: Any command line variables will be passed to the script.
+EXAMPLE: "MyFile.cmd MyVar1 MyVar2" will invoke "MyFile.ps1 MyVar1 MyVar2"
 
 To always run a script with Administrative Privileges, copy the contents
-of the sample-run-ad-admin.ps1 to the beginning of your .ps1 file.
-You will be prompted for credentials.
+of the sample-run-as-admin.ps1 to the beginning of your .ps1 file.
+You will be prompted for credentials if you do not have admin privledges.
 EXAMPLE: C:\users\public> MyFile.cmd
+NOTE: Any command line variables will be passed to the script.
+EXAMPLE: "MyFile.cmd MyVar1 MyVar2" will invoke "MyFile.ps1 MyVar1 MyVar2"
 
 To run a script with User or Administrative Privileges, copy the contents
 of the sample-run-as-user-or-admin.ps1 to the beginning of your .ps1 file.
 Then specify "-RunAs Admin" when running the .cmd file to run with
-Administrative privileges.  You will be prompted for credentials.
+Administrative privileges.  You will then be prompted for credentials if
+you do not have admin privledges.
 EXAMPLE: C:\users\public> MyFile.cmd -RunAs Admin
