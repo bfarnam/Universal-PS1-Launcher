@@ -7,7 +7,7 @@ SET "_b=%ESC%[48;2;1;36;86m"
 SET "_h=%ESC%[93m"
 echo %_f%%_b%
 
-set _version=v2.4 2025 August 29 General Release
+set _version=v2.5 2025 December 04 Maintenance Release
 set _copynotice=Copyright (c) 2025 Brett A. Farnam (brett_farnam@yahoo.com)
 set _git=Git/GitHub https://github.com/bfarnam/Universal-PS1-Launcher.git
 
@@ -49,6 +49,8 @@ ECHO:
 ECHO Starting %~dp0%~n0.ps1 %*
 pushd %~dp0
 powershell.exe -WindowStyle Maximized -File "%~dp0%~n0.ps1" %*
+REM Capture exit code
+set "EXIT_CODE=!ERRORLEVEL!"
 pushd %~dp0
 
 ECHO:
@@ -57,7 +59,7 @@ powershell.exe set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Default -
 ) ELSE (
 ECHO Cannot start %~dp0%~n0.ps1 %*
 ECHO:
-ECHO FILE %~dp0%~n0.ps1 DOES NOT EXIST
+ECHO Error: FILE %~dp0%~n0.ps1 DOES NOT EXIST
 ECHO:
 pause
 )
@@ -78,3 +80,4 @@ ECHO:
 ECHO:
 ECHO Press ^<ANY^> key to end!
 pause
+exit /b !EXIT_CODE!
